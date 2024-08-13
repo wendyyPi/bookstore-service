@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/unread_indicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@android:drawable/ic_notification_overlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/unread_indicator"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvSender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="From:"/>
+
+        <TextView
+            android:id="@+id/tvSenderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+</RelativeLayout>

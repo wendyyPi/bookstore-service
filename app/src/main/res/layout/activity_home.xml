@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/book"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:text="search"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:id="@+id/chat_button_frame"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/search_button">
+
+        <TextView
+            android:id="@+id/unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/chat_button"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/search_button"
+        android:background="@android:color/transparent"
+        android:text="chat"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="30sp" />
+</RelativeLayout>

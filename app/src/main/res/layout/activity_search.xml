@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/book"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/search_bar_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Search Books"
+        android:textSize="20sp"
+        android:textColor="#0652C3"/>
+
+    <EditText
+        android:id="@+id/search_edittext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/search_button"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/search_bar_text_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_username"
+        android:hint="eg: @author;#title"
+        android:inputType="text"
+        android:paddingLeft="10dp" />
+
+    <Spinner
+        android:id="@+id/spinnerLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_edittext"
+        android:layout_marginTop="12dp"
+        android:prompt="@string/language_prompt" />
+
+    <Spinner
+        android:id="@+id/spinnerDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerLanguage"
+        android:layout_marginTop="12dp"
+        android:prompt="@string/date_prompt" />
+
+    <Spinner
+        android:id="@+id/spinnerPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerDate"
+        android:layout_marginTop="12dp"
+        android:prompt="@string/price_prompt" />
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignTop="@id/search_edittext"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:background="@android:color/transparent"
+        android:text="Search"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="19sp" />
+
+    <Button
+        android:id="@+id/advanceSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPrice"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/transparent"
+        android:text="Filter from Result"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/advanced_search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/advanceSearch"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+        <LinearLayout
+            android:id="@+id/dynamic_fields_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <Spinner
+                android:id="@+id/search_option_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/search_option_array"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/apply_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/advanced_search_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:text="Choose a Filter"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/show_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/apply_search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Show Filter Result"
+        android:textSize="18sp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/search_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_filter"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/sort_button"
+        android:layout_width="134dp"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="213dp"
+        android:layout_marginEnd="26dp"
+        android:layout_toEndOf="@+id/advanceSearch"
+        android:background="@android:color/transparent"
+        android:text="Sort Result"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp" />
+
+</RelativeLayout>

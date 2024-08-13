@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BookStore</string>
+    <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="language">Language</string>
+    <string name="author">Author</string>
+    <string name="price">Price</string>
+    <string name="author_prompt">Select a author</string>
+    <string name="title_prompt">Select a title</string>
+    <string name="language_prompt">Select a language code</string>
+    <string name="date_prompt">Select a year range</string>
+    <string name="price_prompt">Select a price range</string>
+    <string name="remove_filter">Remove filter</string>
+    <string-array name="search_option_array">
+        <item>Date</item>
+        <item>Price</item>
+        <item>Language</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="advanced_search_options">
+        <item>Select a Field</item>
+        <item>Author</item>
+        <item>Title</item>
+        <item>Year</item>
+        <item>Price</item>
+        <item>Language</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ims"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frontend.MessageActivity">
+
+    <TextView
+        android:id="@+id/senderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="120dp"
+        android:text="From:"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="sender"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/senderLabel"
+        app:layout_constraintTop_toTopOf="@id/senderLabel" />
+
+    <TextView
+        android:id="@+id/receiverLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="48dp"
+        android:text="To:"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sender" />
+
+    <TextView
+        android:id="@+id/receiver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="receiver"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/receiverLabel"
+        app:layout_constraintTop_toTopOf="@id/receiverLabel" />
+
+    <!-- Add fields for Subject and Date similarly -->
+
+    <TextView
+        android:id="@+id/messageContent"
+        android:layout_width="0dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="44dp"
+        android:text="Message Content"
+        android:textAlignment="gravity"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiverLabel"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:text="Delete"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messageContent"
+        app:layout_constraintVertical_bias="0.372" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

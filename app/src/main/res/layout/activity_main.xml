@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frontend.MainActivity"
+    android:background="@drawable/background"
+    android:padding="15dp">
+
+
+    <LinearLayout
+        android:id="@+id/Lfirst_title"
+        android:layout_width="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Lfirst_page_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeMaxTextSize="45sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="sans-serif-light"
+            android:text="Start \nReading"
+            android:textColor="#4C5960"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Lsign_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="63dp">
+
+        <LinearLayout
+            android:id="@+id/Lsign_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7">
+            <RelativeLayout
+                android:id="@+id/Lemail_sign_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_box2"
+                app:layout_constraintTop_toBottomOf="@+id/name_sign_RelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/Lemail_sign_View"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:text="UserEmail"
+                        android:textColor="#4C5960"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/Lview3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="0.1"
+                        android:background="#EEEFFF" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6.5">
+
+                        <EditText
+                            android:id="@+id/Lemail_signup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#B0FFFFFF"
+                            android:ems="19"
+                            android:hint="Please input email "
+                            android:inputType="textEmailAddress"
+                            android:padding="1dp"
+                            android:paddingStart="10dp"
+                            android:textColor="#4C5960"
+                            android:textColorHint="#4C5960"
+                            android:textSize="16sp">
+
+                            <requestFocus />
+                        </EditText>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/Ldel_email_sign"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_cancel_24"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/Lpassword_sign_RelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_box2"
+                app:layout_constraintTop_toBottomOf="@+id/Lemail_sign_RelativeLayout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/Lpassword_sign_View"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:autoSizeMaxTextSize="24sp"
+                        android:autoSizeMinTextSize="10sp"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:paddingLeft="5dp"
+                        android:text="Password"
+                        android:textColor="#4C5960"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/Lview4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_weight="0.1"
+                        android:background="#EEEFFF" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6.5">
+
+                        <EditText
+                            android:id="@+id/Lpassword_signup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#B0FFFFFF"
+                            android:ems="19"
+                            android:hint="Please input password"
+                            android:inputType="textPassword"
+                            android:padding="1dp"
+                            android:paddingStart="10dp"
+                            android:textColor="#4C5960"
+                            android:textColorHint="#4C5960"
+                            android:textSize="16sp">
+
+                            <requestFocus />
+                        </EditText>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/Ldel_password_sign"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_cancel_24"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/Lsign_code_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"></View>
+
+                <EditText
+                    android:id="@+id/Lsign_code_teacher"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#B0FFFFFF"
+                    android:gravity="center"
+                    android:hint="Enter Secret Code"></EditText>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"></View>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/Llogin_button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="1sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:background="@android:color/transparent"
+                    android:text="Login"
+                    android:textColor="@color/material_dynamic_tertiary60"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.5"></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/LSignUp_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="17sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="top|center"
+                android:text="Don't have an account? SignUp!"
+                android:textColor="@color/material_dynamic_tertiary60"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Llogin_button" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
